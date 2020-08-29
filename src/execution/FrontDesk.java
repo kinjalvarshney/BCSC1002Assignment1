@@ -15,8 +15,8 @@ public class FrontDesk {
         Book book2 = new Book("harry potter", "jk rowling", "1475245224453");
         Book book3 = new Book("twilight", "1421584751247");
 
-        System.out.println("1-" + book1.getBookName() + "\n2-" + book1.getAuthorName() + "\n3-" + book1.getIsbnBookNumber());
-        System.out.println(book2.getBookName() + "\t" + book2.getAuthorName() + "\t" + book2.getIsbnBookNumber());
-        System.out.println(book3.getBookName() + "\t" + book3.getAuthorName());
+        // System.out.println("1-" + book1.getBookName() + "\n2-" + book1.getAuthorName() + "\n3-" + book1.getIsbnBookNumber());
+        // System.out.println(book2.getBookName() + "\t" + book2.getAuthorName() + "\t" + book2.getIsbnBookNumber());
+        System.out.println(book1);
     }
 }
