@@ -1,5 +1,5 @@
 /*  Created by IntelliJ IDEA.
- *  User: kinjal varshney
+ *  User: Kinjal Varshney
  *  Date: 29/08/20
  *  Time: 9:18 PM
  *  File Name : Book.java
@@ -11,6 +11,24 @@ public class Book {
     private String authorName;
     private String isbnBookNumber;
 
+
+    public Book() {
+        bookName = "A Series of Unfortunate Events";
+        authorName = "Lemony Snicket";
+        isbnBookNumber = "1410200110296";
+    }
+
+    public Book(String bookName, String isbnBookNumber) {
+        this.bookName = bookName;
+        authorName = "J.K Rowling";
+        this.isbnBookNumber = isbnBookNumber;
+    }
+
+    public Book(String bookName, String authorName, String isbnBookNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.isbnBookNumber = isbnBookNumber;
+    }
 
     public String getBookName() {
         return bookName;
