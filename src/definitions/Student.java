@@ -96,6 +96,15 @@ public class Student {
         System.out.println("List of number of books issued = " + numberOfBooks);
     }
 
+    /**
+     * This method shows a list of all the books which are issued to Student.
+     */
+    public void showNamesOfBooksIssued() {
+        for (Book book : namesOfBooksIssued) {
+            System.out.println(book);
+        }
+    }
+
     @Override
     public String toString() {
         return "Student{" +
