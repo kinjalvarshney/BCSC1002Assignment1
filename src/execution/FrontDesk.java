@@ -55,6 +55,7 @@ public class FrontDesk {
                     myDetails.showNamesOfBooksIssued();
                     libraryDetails.returnBook(bookName);
                 }
+                default -> System.out.println("--WRONG CHOICE--");
             }
         } while (studentInput != EXIT);
         scanner.close();
