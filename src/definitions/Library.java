@@ -30,6 +30,24 @@ public class Library {
         this.booksCurrentlyAvailable = booksCurrentlyAvailable;
     }
 
+    /**
+     * This method add the name of the books issued to Student.
+     *
+     * @param bookName add name of the book issued
+     */
+    public void issueBook(String bookName) {
+        System.out.println(bookName + " " + "book has been issued successfully");
+    }
+
+    /**
+     * This method add the name of the books returned by Student.
+     *
+     * @param bookName add name of the book returned
+     */
+    public void returnBook(String bookName) {
+        System.out.println(bookName + " " + "book has been returned successfully");
+    }
+
     @Override
     public String toString() {
         return Arrays.toString(booksCurrentlyAvailable);
