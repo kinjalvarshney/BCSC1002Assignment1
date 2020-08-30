@@ -55,6 +55,12 @@ public class FrontDesk {
                     myDetails.showNamesOfBooksIssued();
                     libraryDetails.returnBook(bookName);
                 }
+                case SHOW_ALL_ISSUED_BOOKS -> {
+                    System.out.println("Show all the issued books: ");
+                    scanner.nextLine();
+                    String bookName = scanner.nextLine();
+                    myDetails.showNamesOfBooksIssued();
+                }
                 default -> System.out.println("--WRONG CHOICE--");
             }
         } while (studentInput != EXIT);
