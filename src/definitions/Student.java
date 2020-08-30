@@ -87,6 +87,15 @@ public class Student {
         this.namesOfBooksIssued = namesOfBooksIssued;
     }
 
+    /**
+     * This method add number of books issued by Student.
+     *
+     * @param numberOfBooks the number of books issued.
+     */
+    public void numberOfBooksIssued(int numberOfBooks) {
+        System.out.println("List of number of books issued = " + numberOfBooks);
+    }
+
     @Override
     public String toString() {
         return "Student{" +
