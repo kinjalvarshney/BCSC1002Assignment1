@@ -6,6 +6,9 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Student {
     private String firstName, middleName, lastName;
     private long universityRollNumber;
@@ -82,5 +85,37 @@ public class Student {
 
     public void setNamesOfBooksIssued(Book[] namesOfBooksIssued) {
         this.namesOfBooksIssued = namesOfBooksIssued;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", universityRollNumber=" + universityRollNumber +
+                ", numberOfBooksIssued=" + numberOfBooksIssued +
+                ", namesOfBooksIssued=" + Arrays.toString(namesOfBooksIssued) +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return getUniversityRollNumber() == student.getUniversityRollNumber() &&
+                getNumberOfBooksIssued() == student.getNumberOfBooksIssued() &&
+                Objects.equals(getFirstName(), student.getFirstName()) &&
+                Objects.equals(getMiddleName(), student.getMiddleName()) &&
+                Objects.equals(getLastName(), student.getLastName()) &&
+                Arrays.equals(getNamesOfBooksIssued(), student.getNamesOfBooksIssued());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getFirstName(), getMiddleName(), getLastName(), getUniversityRollNumber(), getNumberOfBooksIssued());
+        result = 31 * result + Arrays.hashCode(getNamesOfBooksIssued());
+        return result;
     }
 }
