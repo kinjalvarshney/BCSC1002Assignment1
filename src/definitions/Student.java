@@ -12,6 +12,30 @@ public class Student {
     private int numberOfBooksIssued;
     private Book[] namesOfBooksIssued;
 
+    public Student() {
+        firstName = "Miley";
+        middleName = "Ray";
+        lastName = "Cyrus";
+        universityRollNumber = 191500399L;
+        numberOfBooksIssued = 1;
+        namesOfBooksIssued = new Book[numberOfBooksIssued];
+        for (int index = 0; index < namesOfBooksIssued.length; index++) {
+            namesOfBooksIssued[index] = new Book("Book" + (index + 1), "1478524187457");
+        }
+    }
+
+    public Student(String firstName, String middleName, String lastName, long universityRollNumber, int numberOfBooksIssued) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.universityRollNumber = universityRollNumber;
+        this.numberOfBooksIssued = numberOfBooksIssued;
+        namesOfBooksIssued = new Book[numberOfBooksIssued];
+        for (int index = 0; index < namesOfBooksIssued.length; index++) {
+            namesOfBooksIssued[index] = new Book("Book" + (index + 1), "Author" + (index + 1), "8754216587321");
+        }
+    }
+
     public String getFirstName() {
         return firstName;
     }

@@ -8,11 +8,13 @@ package execution;
 
 import definitions.Student;
 
+import java.util.Arrays;
+
 public class FrontDesk {
     public static void main(String[] args) {
 
         Student student = new Student();
-        System.out.println(student);
+        System.out.println(student.getFirstName() + student.getMiddleName() + "\n" + Arrays.toString(student.getNamesOfBooksIssued()) + "\n" + student.getNumberOfBooksIssued());
 
     }
 }
